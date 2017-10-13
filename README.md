@@ -4,7 +4,7 @@ A simple utility to convert text into l33t speak.
 
 ## Install
 ```
-$ npm install conduct
+$ npm install leet-speak-converter
 ```
 
 ## Usage
