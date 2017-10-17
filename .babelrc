@@ -5,8 +5,11 @@
       {
         "targets": {
           "browsers": [
-            "last 5 versions",
-            "ie >= 10"
+            "Firefox >= 48",
+            "Chrome >= 54",
+            "ie >= 10",
+            "last 4 versions",
+            "Safari >= 8"
           ]
         }
       }
