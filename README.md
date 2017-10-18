@@ -6,10 +6,19 @@ A simple utility to convert text into l33t speak.
 ```
 $ npm install leet-speak-converter
 ```
+Or if you prefer using Yarn:
+```
+$ yarn add leet-speak-converter
+```
 
 ## Usage
+to run CLI version (in command line) use:
 ```
-$ npm run start
+$ npm run start:cli
+```
+Or if you prefer using Yarn:
+```
+$ yarn run start:cli
 ```
 
 ## Code of Conduct
