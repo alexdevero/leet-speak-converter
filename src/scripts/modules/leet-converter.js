@@ -28,8 +28,6 @@ const alphabetAdvanced = {
 
 // Convert input into l33t
 const convertInput = (text, useAdvanced = 'n') => {
-  text = text
-
   for (let i = 0; i < text.length; i++) {
     let alphabet
     let letter = text[i].toLowerCase()
