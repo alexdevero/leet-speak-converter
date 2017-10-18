@@ -12,7 +12,7 @@
     "start": "set NODE_ENV=development && node ./src/scripts/main.js",
     "start:cli": "set NODE_ENV=development && node ./src/scripts/cli.js",
     "build": "set NODE_ENV=production && babel ./src/scripts/main.js --out-file ./dist/scripts/main.js",
-    "server": "node src/scripts/server.js",
+    "server": "nodemon src/scripts/server.js -e html, css, js",
     "test": "set NODE_ENV=test && eslint ./src/**/*.js"
   },
   "repository": {
@@ -39,6 +39,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.9.0"
+    "eslint": "^4.9.0",
+    "nodemon": "^1.12.1"
   }
 }
