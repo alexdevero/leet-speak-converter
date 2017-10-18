@@ -53,4 +53,4 @@ const convertInput = (text, useAdvanced = 'n') => {
   return text
 }
 
-module.exports.convertInput = convertInput
+module.exports = convertInput
