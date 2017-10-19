@@ -1,4 +1,4 @@
-'use strict'
+// Web version of l33t speak converter
 
 const alphabetBasic = {
   'a': '4',

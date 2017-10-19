@@ -1,7 +1,5 @@
 // CLI version of l33t speak converter
 
-'use strict'
-
 const readline = require('readline')
 
 const convertInput = require('./modules/leet-converter')
