@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en-gb">
+<html class="no-js" lang="en-gb" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -39,6 +39,9 @@
   <meta itemprop="name" content="L33t Speak Converter">
   <meta itemprop="description" content="A simple utility to convert text into leet speak.">
 
+  <!-- Font Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="./styles/styles.compiled.css">
 </head>
@@ -48,24 +51,33 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <p>L337 5p34k C0nv3r73r</p>
+  <div class="wrapper">
+    <div class="col__full">
+      <h1 class="heading">L337 5p34k C0nv3r73r</h1>
+    </div>
 
-  <div>
-    <label for="leet-textarea">Original text:</label>
-    <textarea name="leet-textarea" id="leet-textarea" class="leet-textarea" cols="30" rows="10"></textarea>
+    <div class="col__full">
+      <div class="col__half">
+        <label for="leet-textarea">Original text:</label>
+        <textarea name="leet-textarea" id="leet-textarea" class="leet-textarea"></textarea>
+      </div>
 
-    <label for="leet-result">Result:</label>
-    <textarea name="leet-result" id="leet-result" class="leet-result" cols="30" rows="10"></textarea>
+      <div class="col__half">
+        <label for="leet-result">Result:</label>
+        <textarea name="leet-result" id="leet-result" class="leet-result"></textarea>
+      </div>
+    </div>
+
+    <div class="col__full">
+      <input id="leet-checkbox" class="leet-checkbox" name="leet-checkbox" type="checkbox">
+      <label for="leet-checkbox">Use advanced l33t alphabet</label>
+
+    </div>
+
+    <div class="col__full btn-container">
+      <button class="leet-button btn" type="button">Translate</button>
+    </div>
   </div>
-
-  <div>
-    <label for="leet-checkbox">
-      <input id="leet-checkbox" class="leet-checkbox" name="leet-checkbox" type="checkbox"> Use advanced alphabet
-    </label>
-  </div>
-
-  <button class="leet-button" type="button">Translate</button>
 
   <!-- Main scripts -->
   <script src="./scripts/main.compiled.js"></script>
