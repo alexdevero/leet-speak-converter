@@ -4,7 +4,6 @@ import gulp from 'gulp'
 
 import babel from 'gulp-babel'
 import browserSync from 'browser-sync'
-import jsImport from 'gulp-js-import'
 import plumber from 'gulp-plumber'
 import prune from 'gulp-prune'
 import rename from 'gulp-rename'
@@ -17,7 +16,6 @@ gulp.task('js', () => {
   return gulp.src('./src/scripts/main.js')
     .pipe(plumber())
     .pipe(prune({ dest: './src/scripts', ext: ['.compiled.js', '.js.map'] }))
-    .pipe(jsImport({ hideConsole: false }))
     .pipe(babel())
     // .pipe(uglify({
     //   compress: {

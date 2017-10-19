@@ -2238,13 +2238,6 @@ gulp-csscomb@^3.0.8:
     gulp-util "^3.0.7"
     through2 "^2.0.1"
 
-gulp-js-import@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/gulp-js-import/-/gulp-js-import-1.0.6.tgz#696ac6b8fa76a866a94e000b0f0e25885e83ac25"
-  dependencies:
-    gulp-util "^3.0.7"
-    through2 "^2.0.1"
-
 gulp-plumber@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/gulp-plumber/-/gulp-plumber-1.1.0.tgz#f12176c2d0422f60306c242fff6a01a394faba09"
