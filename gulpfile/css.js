@@ -54,13 +54,13 @@ gulp.task('css', () => {
   return gulp.src('./src/styles/styles.css')
     .pipe(plumber())
     .pipe(prune({ dest: './src/styles', ext: ['.compiled.css', '.css.map'] }))
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(csscomb())
     .pipe(rename({
       suffix: '.compiled'
     }))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./src/styles/'))
     .pipe(browserSync.stream({
       match: '**/*.css'
