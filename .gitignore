@@ -3,6 +3,7 @@
 .tmp/
 dist/
 node_modules/
+*.compiled.*
 
 # Folder config file #
 ######################
