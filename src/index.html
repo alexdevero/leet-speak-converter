@@ -9,7 +9,7 @@
   <meta name="description" content="A simple utility to convert text into leet speak.">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
@@ -18,13 +18,31 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <p>L337 5p34k C0nv3r73r</p>
+
+  <div>
+    <label for="leet-textarea">Original text:</label>
+    <textarea name="leet-textarea" id="leet-textarea" class="leet-textarea" cols="30" rows="10"></textarea>
+
+    <label for="leet-result">Result:</label>
+    <textarea name="leet-result" id="leet-result" class="leet-result" cols="30" rows="10"></textarea>
+  </div>
+
+  <div>
+    <label for="leet-checkbox">
+      <input id="leet-checkbox" class="leet-checkbox" name="leet-checkbox" type="checkbox"> Use advanced alphabet
+    </label>
+  </div>
+
+  <button class="leet-button" type="button">Translate</button>
+
+  <!-- Main scripts -->
   <script src="./scripts/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-  ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
