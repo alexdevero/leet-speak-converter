@@ -7,6 +7,7 @@ import browserSync from 'browser-sync'
 import plumber from 'gulp-plumber'
 import prune from 'gulp-prune'
 import rename from 'gulp-rename'
+import sourcemaps from 'gulp-sourcemaps'
 import uglify from 'gulp-uglify'
 
 // Minify JavaScript files
@@ -16,6 +17,7 @@ gulp.task('js', () => {
   return gulp.src('./src/scripts/main.js')
     .pipe(plumber())
     .pipe(prune({ dest: './src/scripts', ext: ['.compiled.js', '.js.map'] }))
+    .pipe(sourcemaps.init())
     .pipe(babel())
     // .pipe(uglify({
     //   compress: {
@@ -27,6 +29,7 @@ gulp.task('js', () => {
     .pipe(rename({
       suffix: '.compiled'
     }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./src/scripts/'))
     .pipe(browserSync.stream({
       match: '**/*.js'
