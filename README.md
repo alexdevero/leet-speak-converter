@@ -19,13 +19,21 @@ $ yarn add leet-speak-converter
 ```
 
 ## Usage
-to run CLI version (in command line) use:
+### Run CLI version (in command line):
 ```
 $ npm run start:cli
 ```
 Or if you prefer using Yarn:
 ```
 $ yarn run start:cli
+```
+### Run web version (on locahost, port 1337) use:
+```
+$ npm run start:web
+```
+Or if you prefer using Yarn:
+```
+$ yarn run start:web
 ```
 
 ## Code of Conduct
