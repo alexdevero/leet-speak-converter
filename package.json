@@ -9,15 +9,14 @@
     "yarn": ">=0.27.x"
   },
   "scripts": {
-    "build-css": "postcss './src/styles/styles.css'",
+    "build-css": "postcss -c postcss.config.json \"./src/styles/styles.css\"",
     "start": "set NODE_ENV=development && npm run server | npm run watch-css",
-    "start:webpack": "webpack-dev-server -d --hot --inline --progress --colors --port 1337",
     "start:beta": "npm run server",
     "start:cli": "set NODE_ENV=development && node ./src/scripts/cli.js",
     "build": "set NODE_ENV=production && babel ./src/scripts/main.js --out-file ./dist/scripts/main.js",
     "server": "nodemon src/scripts/server.js -e html, css, js",
     "test": "set NODE_ENV=test && eslint ./src/**/*.js",
-    "watch-css": "nodemon -e css -x 'npm run build-css'"
+    "watch-css": "nodemon -e css -x npm run build-css"
   },
   "repository": {
     "type": "git",
@@ -43,13 +42,16 @@
     "postcss": "^6.0.13",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
-    "postcss-pxtorem": "^4.0.1"
+    "postcss-nested": "^2.1.2",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-simple-vars": "^4.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
     "eslint": "^4.9.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "postcss-cli": "^4.1.1"
   }
 }
