@@ -109,6 +109,16 @@ const checkboxReverseEl = document.querySelector('.leet-reverse')
 const resultEl = document.querySelector('.leet-result')
 const textareaEl = document.querySelector('.leet-textarea')
 
+// If user wants to use advanced l33t conversion, disable option for conversion from l33t to text
+checkboxAdvancedEl.addEventListener('click', (e) => {
+  (e.target.checked) ? checkboxReverseEl.setAttribute('disabled', true) : checkboxReverseEl.removeAttribute('disabled')
+})
+
+// If user wants to use conversion from l33t to text, disable option for advanced l33t conversion
+checkboxReverseEl.addEventListener('click', (e) => {
+  (e.target.checked) ? checkboxAdvancedEl.setAttribute('disabled', true) : checkboxAdvancedEl.removeAttribute('disabled')
+})
+
 buttonEl.addEventListener('click', () => {
   let text = textareaEl.value
   let useAdvanced = checkboxAdvancedEl.checked ? 'y' : 'n'
