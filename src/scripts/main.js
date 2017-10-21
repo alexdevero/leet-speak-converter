@@ -28,8 +28,7 @@ const alphabetAdvanced = {
   'y': '\'/'
 }
 
-const alphabetReversed = {
-  '3': 'e',
+/*const alphabetReversed = {
   '(': 'c', // or k or |< or /<
   '|\\/|': 'm',
   '|\\|': 'n',
@@ -42,16 +41,17 @@ const alphabetReversed = {
   '/': 'v', // or \/
   '//': 'w', // or \/\/
   '><': 'x',
-  '4': 'a',
-  '\'/': 'y',
-  '8': 'b',
-  'ph': 'f',
-  '6': 'g', // or 9
   '1': 'i', // or |
   '0': 'o',
+  '3': 'e',
+  '4': 'a',
   '5': 's',
-  '7': 't' // or +
-}
+  '6': 'g', // or 9
+  '7': 't', // or +
+  '8': 'b',
+  '\'/': 'y',
+  'ph': 'f'
+}*/
 
 // Convert input into l33t
 const convertInput = (text, useAdvanced = 'n') => {
@@ -76,12 +76,29 @@ const convertInput = (text, useAdvanced = 'n') => {
 }
 
 const convertInputReverse = (text) => {
-  // Working basic version
-  for (let prop in alphabetReversed) {
-    if (text.indexOf(prop) != -1) {
-      text = text.replace(new RegExp(prop, 'g'), alphabetReversed[prop])
-    }
-  }
+  text = text.toLowerCase()
+    .replace(/(\|\\\/\|)/g, 'm')
+    .replace(/(\|\\\|)/g, 'n')
+    .replace(/(\()/g, 'c')
+    .replace(/(<\|)/g, 'd')
+    .replace(/\|-\|/g, 'h')
+    .replace(/(\|<)/g, 'k')
+    .replace(/(\|2)/g, 'p')
+    .replace(/(\|_\|)/g, 'u')
+    .replace(/(\/\/)/g, 'w')
+    .replace(/(><)/g, 'x')
+    .replace(/(\|)/g, 'l')
+    .replace(/(\'\/)/g, 'y')
+    .replace(/(\/)/g, 'v')
+    .replace(/(1)/g, 'i')
+    .replace(/(0)/g, 'o')
+    .replace(/(3)/g, 'e')
+    .replace(/(4)/g, 'a')
+    .replace(/(5)/g, 's')
+    .replace(/(6)/g, 'g')
+    .replace(/(7)/g, 't')
+    .replace(/(8)/g, 'b')
+    .replace(/(ph)/g, 'f')
 
   return text
 }
@@ -99,10 +116,8 @@ buttonEl.addEventListener('click', () => {
 
   if (convertReversed.toLowerCase() === 'y') {
     text = convertInputReverse(text)
-    console.log('reversed')
   } else {
     text = convertInput(text, useAdvanced)
-    console.log('regular')
   }
 
   resultEl.value = text
