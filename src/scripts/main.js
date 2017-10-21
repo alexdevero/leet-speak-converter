@@ -1,5 +1,11 @@
 // Web version of l33t speak converter
 
+const buttonEl = document.querySelector('.leet-button')
+const checkboxAdvancedEl = document.querySelector('.leet-advanced')
+const checkboxReverseEl = document.querySelector('.leet-reverse')
+const resultEl = document.querySelector('.leet-result')
+const textareaEl = document.querySelector('.leet-textarea')
+
 const alphabetBasic = {
   'a': '4',
   'b': '8',
@@ -28,30 +34,15 @@ const alphabetAdvanced = {
   'y': '\'/'
 }
 
-/* const alphabetReversed = {
-  '(': 'c', // or k or |< or /<
-  '|\\/|': 'm',
-  '|\\|': 'n',
-  '<|': 'd',
-  '|-|': 'h',
-  '|<': 'k', // or /<
-  '|': 'l', // or 1
-  '|2': 'p',
-  '|_|': 'u',
-  '/': 'v', // or \/
-  '//': 'w', // or \/\/
-  '><': 'x',
-  '1': 'i', // or |
-  '0': 'o',
-  '3': 'e',
-  '4': 'a',
-  '5': 's',
-  '6': 'g', // or 9
-  '7': 't', // or +
-  '8': 'b',
-  '\'/': 'y',
-  'ph': 'f'
-} */
+// If user wants to use advanced l33t conversion, disable option for conversion from l33t to text
+checkboxAdvancedEl.addEventListener('click', (e) => {
+  (e.target.checked) ? checkboxReverseEl.setAttribute('disabled', true) : checkboxReverseEl.removeAttribute('disabled')
+})
+
+// If user wants to use conversion from l33t to text, disable option for advanced l33t conversion
+checkboxReverseEl.addEventListener('click', (e) => {
+  (e.target.checked) ? checkboxAdvancedEl.setAttribute('disabled', true) : checkboxAdvancedEl.removeAttribute('disabled')
+})
 
 // Convert input into l33t
 const convertInput = (text, useAdvanced = 'n') => {
@@ -102,22 +93,6 @@ const convertInputReverse = (text) => {
 
   return text
 }
-
-const buttonEl = document.querySelector('.leet-button')
-const checkboxAdvancedEl = document.querySelector('.leet-advanced')
-const checkboxReverseEl = document.querySelector('.leet-reverse')
-const resultEl = document.querySelector('.leet-result')
-const textareaEl = document.querySelector('.leet-textarea')
-
-// If user wants to use advanced l33t conversion, disable option for conversion from l33t to text
-checkboxAdvancedEl.addEventListener('click', (e) => {
-  (e.target.checked) ? checkboxReverseEl.setAttribute('disabled', true) : checkboxReverseEl.removeAttribute('disabled')
-})
-
-// If user wants to use conversion from l33t to text, disable option for advanced l33t conversion
-checkboxReverseEl.addEventListener('click', (e) => {
-  (e.target.checked) ? checkboxAdvancedEl.setAttribute('disabled', true) : checkboxAdvancedEl.removeAttribute('disabled')
-})
 
 buttonEl.addEventListener('click', () => {
   let text = textareaEl.value
