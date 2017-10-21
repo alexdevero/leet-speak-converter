@@ -28,7 +28,7 @@ const alphabetAdvanced = {
   'y': '\'/'
 }
 
-/*const alphabetReversed = {
+/* const alphabetReversed = {
   '(': 'c', // or k or |< or /<
   '|\\/|': 'm',
   '|\\|': 'n',
@@ -51,7 +51,7 @@ const alphabetAdvanced = {
   '8': 'b',
   '\'/': 'y',
   'ph': 'f'
-}*/
+} */
 
 // Convert input into l33t
 const convertInput = (text, useAdvanced = 'n') => {
@@ -104,14 +104,14 @@ const convertInputReverse = (text) => {
 }
 
 const buttonEl = document.querySelector('.leet-button')
-const checkboxEl = document.querySelector('.leet-checkbox')
+const checkboxAdvancedEl = document.querySelector('.leet-advanced')
 const checkboxReverseEl = document.querySelector('.leet-reverse')
 const resultEl = document.querySelector('.leet-result')
 const textareaEl = document.querySelector('.leet-textarea')
 
 buttonEl.addEventListener('click', () => {
   let text = textareaEl.value
-  let useAdvanced = checkboxEl.checked ? 'y' : 'n'
+  let useAdvanced = checkboxAdvancedEl.checked ? 'y' : 'n'
   let convertReversed = checkboxReverseEl.checked ? 'y' : 'n'
 
   if (convertReversed.toLowerCase() === 'y') {
