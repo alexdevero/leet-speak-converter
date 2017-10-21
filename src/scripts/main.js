@@ -12,18 +12,6 @@ const alphabetBasic = {
   't': '7' // or +
 }
 
-const alphabetBasicReversed = {
-  '4': 'a',
-  '8': 'b',
-  '3': 'e',
-  'ph': 'f',
-  '6': 'g', // or 9
-  '1': 'i', // or |
-  '0': 'o',
-  '5': 's',
-  '7': 't' // or +
-}
-
 const alphabetAdvanced = {
   'c': '(', // or k or |< or /<
   'd': '<|',
@@ -40,20 +28,29 @@ const alphabetAdvanced = {
   'y': '\'/'
 }
 
-const alphabetAdvancedReversed = {
+const alphabetReversed = {
+  '3': 'e',
   '(': 'c', // or k or |< or /<
+  '|\\/|': 'm',
+  '|\\|': 'n',
   '<|': 'd',
   '|-|': 'h',
   '|<': 'k', // or /<
   '|': 'l', // or 1
-  '|\\/|': 'm',
-  '|\\|': 'n',
   '|2': 'p',
   '|_|': 'u',
   '/': 'v', // or \/
   '//': 'w', // or \/\/
   '><': 'x',
-  '\'/': 'y'
+  '4': 'a',
+  '\'/': 'y',
+  '8': 'b',
+  'ph': 'f',
+  '6': 'g', // or 9
+  '1': 'i', // or |
+  '0': 'o',
+  '5': 's',
+  '7': 't' // or +
 }
 
 // Convert input into l33t
@@ -79,23 +76,10 @@ const convertInput = (text, useAdvanced = 'n') => {
 }
 
 const convertInputReverse = (text) => {
-  for (let i = 0; i < text.length; i++) {
-    let alphabet = ''/*alphabetBasicReversed[letter] ? alphabetBasicReversed[letter] : alphabetAdvancedReversed[letter]*/
-
-    let letter = text[i].toLowerCase()
-
-    if (alphabetAdvancedReversed[letter]) {
-      alphabet = alphabetAdvancedReversed[letter]
-    } else if (alphabetBasicReversed[letter]) {
-      alphabet = alphabetBasicReversed[letter]
-    } else {
-      alphabet = letter
-    }
-
-    console.log(alphabet)
-
-    if (alphabet) {
-      text = text.replace(text[i], alphabet)
+  // Working basic version
+  for (let prop in alphabetReversed) {
+    if (text.indexOf(prop) != -1) {
+      text = text.replace(new RegExp(prop, 'g'), alphabetReversed[prop])
     }
   }
 
