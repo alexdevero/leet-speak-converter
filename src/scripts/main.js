@@ -36,12 +36,24 @@ const alphabetAdvanced = {
 
 // If user wants to use advanced l33t conversion, disable option for conversion from l33t to text
 checkboxAdvancedEl.addEventListener('click', (e) => {
-  (e.target.checked) ? checkboxReverseEl.setAttribute('disabled', true) : checkboxReverseEl.removeAttribute('disabled')
+  if (e.target.checked) {
+    checkboxReverseEl.setAttribute('disabled', true)
+    checkboxReverseEl.parentNode.classList.add('switch--inactive')
+  } else {
+    checkboxReverseEl.removeAttribute('disabled')
+    checkboxReverseEl.parentNode.classList.remove('switch--inactive')
+  }
 })
 
 // If user wants to use conversion from l33t to text, disable option for advanced l33t conversion
 checkboxReverseEl.addEventListener('click', (e) => {
-  (e.target.checked) ? checkboxAdvancedEl.setAttribute('disabled', true) : checkboxAdvancedEl.removeAttribute('disabled')
+  if (e.target.checked) {
+    checkboxAdvancedEl.setAttribute('disabled', true)
+    checkboxAdvancedEl.parentNode.classList.add('switch--inactive')
+  } else {
+    checkboxAdvancedEl.removeAttribute('disabled')
+    checkboxAdvancedEl.parentNode.classList.remove('switch--inactive')
+  }
 })
 
 // Convert input into l33t
