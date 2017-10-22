@@ -2,7 +2,7 @@
 
 const readline = require('readline')
 
-const { convertInput, convertInputReverse } = require('./modules/leet-converter')
+const { convertInput, convertInputReverse } = require('./leet-converter')
 
 const rl = readline.createInterface({
   input: process.stdin,
