@@ -1,7 +1,7 @@
 {
-  "name": "leet-speak-encoder",
+  "name": "leet-speak-converter",
   "version": "1.0.0",
-  "description": "A simple utility to convert text into leet speak.",
+  "description": "A smart and simple utility to convert text into leet speak.",
   "main": "main.js",
   "engines": {
     "node": ">=8.0.0",
@@ -11,7 +11,7 @@
   "scripts": {
     "start:web": "set NODE_ENV=development && gulp dev",
     "start:cli": "set NODE_ENV=development && node ./src/scripts/cli.js",
-    "build": "set NODE_ENV=production && babel ./src/scripts/main.js --out-file ./dist/scripts/main.js",
+    "build": "set NODE_ENV=production && babel ./src/scripts/*.js --out-dir ./dist",
     "test": "set NODE_ENV=test && eslint ./src/**/*.js"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "keywords": [
     "converter",
+    "l33t",
     "leet",
     "language",
     "speak",
