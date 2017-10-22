@@ -19,6 +19,24 @@ $ yarn add leet-speak-converter
 ```
 
 ## Usage
+### Use l33t converter in your code:
+```
+// Import converter
+// convertInput: converts text to leet
+// convertInputReverse: converts leet to text
+const { convertInput, convertInputReverse } = require('./leet-converter')
+
+// Convert text to leet
+// text: string
+// useAdvanced: string - 'Y' or 'N'
+convertInput(text, useAdvanced)
+
+// Convert leet to text
+// text: string
+convertInputReverse(text)
+
+```
+
 ### Run CLI version (in command line):
 ```
 $ npm run start:cli
