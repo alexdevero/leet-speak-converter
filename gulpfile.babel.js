@@ -22,7 +22,7 @@ gulp.task('server', ['browser-sync'], () => {
   const browserSync = require('browser-sync')
   const reload = browserSync.reload
 
-  // gulp.watch('./src/*.html', ['html'], reload)
-  gulp.watch('./src/styles/**/*.css', ['css'], reload)
-  gulp.watch('./src/scripts/**/*.js', ['js'], reload)
+  // gulp.watch('./example/*.html', ['html'], reload)
+  gulp.watch('./example/styles/**/*.css', ['css'], reload)
+  gulp.watch('./example/scripts/**/*.js', ['js'], reload)
 })
