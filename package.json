@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "rm -r ./dist/*",
-    "build": "set NODE_ENV=production && babel ./src/*.js --out-dir ./dist --source-maps --copy-files",
+    "build": "set NODE_ENV=production && babel ./src --out-dir ./dist --source-maps --copy-files",
     "start:cli": "set NODE_ENV=development && node ./src/cli.js",
     "start:web": "set NODE_ENV=development && gulp dev",
     "test": "set NODE_ENV=test && eslint ./src/**/*.js"
