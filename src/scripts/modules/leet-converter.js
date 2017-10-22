@@ -51,4 +51,35 @@ const convertInput = (text, useAdvanced = 'n') => {
   return text
 }
 
-module.exports = convertInput
+const convertInputReverse = (text) => {
+  text = text.toLowerCase()
+    .replace(/(\|\\\/\|)/g, 'm')
+    .replace(/(\|\\\|)/g, 'n')
+    .replace(/(\()/g, 'c')
+    .replace(/(<\|)/g, 'd')
+    .replace(/\|-\|/g, 'h')
+    .replace(/(\|<)/g, 'k')
+    .replace(/(\|2)/g, 'p')
+    .replace(/(\|_\|)/g, 'u')
+    .replace(/(\/\/)/g, 'w')
+    .replace(/(><)/g, 'x')
+    .replace(/(\|)/g, 'l')
+    .replace(/(\'\/)/g, 'y')
+    .replace(/(\/)/g, 'v')
+    .replace(/(1)/g, 'i')
+    .replace(/(0)/g, 'o')
+    .replace(/(3)/g, 'e')
+    .replace(/(4)/g, 'a')
+    .replace(/(5)/g, 's')
+    .replace(/(6)/g, 'g')
+    .replace(/(7)/g, 't')
+    .replace(/(8)/g, 'b')
+    .replace(/(ph)/g, 'f')
+
+  // Show the result in console
+  console.log(text)
+
+  return text
+}
+
+module.exports = { convertInput, convertInputReverse }
