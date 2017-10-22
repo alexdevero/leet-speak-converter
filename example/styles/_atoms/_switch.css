@@ -23,12 +23,12 @@
       background-color: #eee;
 
       span {
-        color: #888;
+        color: $dark-grey;
       }
     }
 
     .switch__label {
-      color: #888;
+      color: $dark-grey;
     }
   }
 }
@@ -38,7 +38,7 @@
   visibility: hidden;
 
   &:checked ~ .switch__paddle {
-    background: #ff3366;
+    background: $vidid-red;
 
     &:after {
       left: 36px;

@@ -22,7 +22,7 @@
   padding: 0 16px;
   width: 100%;
 
-  @media (min-width: 480px) {
+  @media (min-width: $breakpoint-mobile) {
     flex-direction: row;
   }
 
@@ -53,7 +53,7 @@
   padding: 0 16px;
   width: 100%;
 
-  @media (min-width: 480px) {
+  @media (min-width: $breakpoint-mobile) {
     width: 50%;
   }
 }

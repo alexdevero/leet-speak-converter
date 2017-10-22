@@ -11,7 +11,7 @@
   font-size: 16px;
   font-family: inherit;
   color: #fff;
-  background-color: #ff3366;
+  background-color: $vidid-red;
   border: 0;
   border-radius: 35px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);

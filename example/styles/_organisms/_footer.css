@@ -20,7 +20,7 @@ footer {
   }
 
   a {
-    color: #888;
+    color: $dark-grey;
     transition: color .25s ease-in;
 
     &:focus,
