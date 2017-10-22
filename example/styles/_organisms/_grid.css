@@ -1,0 +1,59 @@
+/* Simple grid */
+
+.wrapper,
+.col__full {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  padding-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  min-height: calc(100vh - 80px);
+}
+
+.col__full {
+  flex-direction: column;
+  padding: 0 16px;
+  width: 100%;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
+
+  & + & {
+    margin-top: 12px;
+  }
+
+  .col__half {
+    @media (max-width: 479px) {
+      padding: 0;
+
+      &:last-of-type {
+        margin-top: 12px;
+      }
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.col__half {
+  padding: 0 16px;
+  width: 100%;
+
+  @media (min-width: 480px) {
+    width: 50%;
+  }
+}

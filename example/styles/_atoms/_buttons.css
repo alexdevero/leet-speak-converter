@@ -1,0 +1,25 @@
+/* Buttons */
+
+.btn-container {
+  @media (min-width: 480px) {
+    justify-content: center;
+  }
+}
+
+.btn {
+  padding: 12px 32px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #fff;
+  background-color: #ff3366;
+  border: 0;
+  border-radius: 35px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+  cursor: pointer;
+  transition: box-shadow .25s ease-in;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+  }
+}

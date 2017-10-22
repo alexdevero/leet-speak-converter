@@ -1,0 +1,16 @@
+/* Form elements */
+
+textarea {
+  padding: 8px;
+  width: 100%;
+  min-height: 120px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+
+  @media (min-width: 480px) {
+    min-height: 220px;
+  }
+}

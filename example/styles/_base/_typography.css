@@ -1,0 +1,12 @@
+/* Typography */
+
+.heading {
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+
+  @media (min-width: 480px) {
+    font-size: 32px;
+  }
+}
