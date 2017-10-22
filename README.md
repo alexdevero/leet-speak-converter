@@ -7,7 +7,7 @@
 
 # l33t speak converter
 
-A simple utility to convert text into l33t speak.
+A simple utility to convert text into l33t speak. You can test it [here](https://alexdevero.com/labs/leetspeak).
 
 ## Install
 ```
