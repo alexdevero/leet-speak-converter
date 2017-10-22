@@ -20,7 +20,7 @@ $ yarn add leet-speak-converter
 
 ## Usage
 ### Use l33t converter in your code:
-```
+```js
 // Import converter
 // convertInput: converts text to leet
 // convertInputReverse: converts leet to text
