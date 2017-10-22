@@ -24,14 +24,11 @@ body {
   padding-top: 16px;
   margin-right: auto;
   margin-left: auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 768px;
   min-height: calc(100vh - 80px);
-
-  @media (min-width: 480px) {
-    padding-top: 32px;
-  }
 }
 
 .col__full {
