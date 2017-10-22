@@ -51,9 +51,9 @@ gulp.task('css', () => {
     pxtorem(pxtoremConfig)
   ]
 
-  return gulp.src('./src/styles/styles.css')
+  return gulp.src('./example/styles/styles.css')
     .pipe(plumber())
-    .pipe(prune({ dest: './src/styles', ext: ['.compiled.css', '.css.map'] }))
+    .pipe(prune({ dest: './example/styles', ext: ['.compiled.css', '.css.map'] }))
     // .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(csscomb())
@@ -61,7 +61,7 @@ gulp.task('css', () => {
       suffix: '.compiled'
     }))
     // .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./src/styles/'))
+    .pipe(gulp.dest('./example/styles/'))
     .pipe(browserSync.stream({
       match: '**/*.css'
     }))

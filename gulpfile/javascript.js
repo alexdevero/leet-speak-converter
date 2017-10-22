@@ -14,9 +14,9 @@ import uglify from 'gulp-uglify'
 gulp.task('js', () => {
   const uglifyDropConsole = (process.env.NODE_ENV.trim() !== 'development')
 
-  return gulp.src('./src/scripts/main.js')
+  return gulp.src('./example/scripts/main.js')
     .pipe(plumber())
-    .pipe(prune({ dest: './src/scripts', ext: ['.compiled.js', '.js.map'] }))
+    .pipe(prune({ dest: './example/scripts', ext: ['.compiled.js', '.js.map'] }))
     .pipe(sourcemaps.init())
     .pipe(babel())
     // .pipe(uglify({
@@ -30,7 +30,7 @@ gulp.task('js', () => {
       suffix: '.compiled'
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./src/scripts/'))
+    .pipe(gulp.dest('./example/scripts/'))
     .pipe(browserSync.stream({
       match: '**/*.js'
     }))
