@@ -22,6 +22,11 @@ Or if you prefer using Yarn:
 $ yarn add leet-speak-converter
 ```
 
+Or you can also clone this repo
+```
+$ git clone https://github.com/alexdevero/leet-speak-converter.git
+```
+
 ## Usage
 ### Use l33t converter in your code:
 ```js
