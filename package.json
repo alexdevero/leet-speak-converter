@@ -1,6 +1,6 @@
 {
   "name": "leet-speak-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A smart and simple utility to convert text into leet speak.",
   "main": "main.js",
   "engines": {
