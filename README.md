@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <a href="https://david-dm.org/alexdevero/leet-speak-converter"><img alt="Dependency Status" src="https://david-dm.org/alexdevero/leet-speak-converter.svg?style=flat"></a>
   <a href="https://david-dm.org/alexdevero/leet-speak-converter?type=dev"><img alt="devDependency Status" src="https://david-dm.org/alexdevero/leet-speak-converter/dev-status.svg?style=flat"></a>
   <a href="https://alexdevero.com"><img alt="Built by DEVERO" src="https://img.shields.io/badge/built%20by-DEVERO-brightgreen.svg?colorB=d30320"></a>
@@ -14,6 +14,7 @@
 A simple utility to convert text into l33t speak. You can test it [here](https://alexdevero.com/labs/leetspeak).
 
 ### Table of contents
+
 * [Install](#install)
 * [Usage](#usage)
 * [Support this project](#support-this-project)
@@ -21,6 +22,7 @@ A simple utility to convert text into l33t speak. You can test it [here](https:/
 * [License](#license)
 
 ## Install
+
 ```
 $ npm install leet-speak-converter
 ```
@@ -35,7 +37,9 @@ $ git clone https://github.com/alexdevero/leet-speak-converter.git
 ```
 
 ## Usage
-### Use l33t converter in your code:
+
+### Use l33t converter in your code
+
 ```js
 // Import converter
 // convertInput: converts text to leet
@@ -53,7 +57,8 @@ convertInputReverse(text)
 
 ```
 
-### Run CLI version (in command line):
+### Run CLI version (in command line)
+
 ```
 $ npm run start:cli
 ```
@@ -61,7 +66,9 @@ Or if you prefer using Yarn:
 ```
 $ yarn run start:cli
 ```
-### Run web version (on locahost, port 1337) use:
+
+### Run web version (on locahost, port 1337) use
+
 ```
 $ npm run start:web
 ```
