@@ -39,7 +39,7 @@
   "dependencies": {
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
-    "postcss-nested": "^2.1.2",
+    "postcss-nested": "^3.0.0",
     "postcss-pxtorem": "^4.0.1",
     "postcss-simple-vars": "^4.1.0"
   },
@@ -49,7 +49,7 @@
     "browser-sync": "^2.18.13",
     "cross-env": "^5.1.1",
     "cssnano": "^3.10.0",
-    "eslint": "^4.12.0",
+    "eslint": "^4.13.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-csscomb": "^3.0.8",
@@ -61,7 +61,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.12.5",
     "postcss-cli": "^4.1.1",
     "require-dir": "^0.3.2"
   }
